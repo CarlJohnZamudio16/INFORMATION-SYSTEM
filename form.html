@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form - Student Information System</title>
+</head>
+<body>
+    <nav class="navbar bg-dark py-4 sticky-top shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"><img src="logo.svg" width="50px" height="50px" alt="Logo"></a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Register Student
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">Dashboard</a></li>
+                    <li><a class="dropdown-item" href="form.html">Register Student</a></li>
+                    <li><a class="dropdown-item" href="table.html">Student Data Table</a></li>
+                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container my-5 px-5 w-50 shadow-2xl">
+        <h2 class="mb-4 text-4xl font-bold">Student Registration Form</h2>
+        <form id="studentForm">
+            <div class="row">
+    
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="studentId" class="form-label font-semibold text-orange-500">Student ID</label>
+                        <input type="text" class="form-control" id="studentId" placeholder="Enter Student ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fname" class="form-label font-semibold text-orange-500">First Name</label>
+                        <input type="text" class="form-control" id="fname" placeholder="Enter First Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lname" class="form-label font-semibold text-orange-500">Last Name</label>
+                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label font-semibold text-orange-500">Gender</label>
+                        <select class="form-select" id="gender">
+                            <option selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthday" class="form-label font-semibold text-orange-500">Birthday</label>
+                        <input type="date" class="form-control" id="birthday">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label font-semibold text-orange-500">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter Age" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="course" class="form-label font-semibold text-orange-500">Course</label>
+                        <select class="form-select" id="course">
+                            <option selected>Select Course</option>
+                            <option value="BSIT">Bachelor of Science in Information Technology (BSIT)</option>
+                            <option value="BSCS">Bachelor of Science in Computer Science (BSCS)</option>
+                            <option value="BSBA">Bachelor of Science in Business Administration (BSBA)</option>
+                            <option value="BSCE">Bachelor of Science in Civil Engineering (BSCE)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="yearLevel" class="form-label font-semibold text-orange-500">Year Level</label>
+                        <select class="form-select" id="yearLevel">
+                            <option selected>Select Year Level</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                            <option value="4th Year">4th Year</option>
+                        </select>
+                    </div>
+                </div>
+    
+                
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="faname" class="form-label font-semibold text-orange-500">Name of Father</label>
+                        <input type="text" class="form-control" id="faname" placeholder="Enter name of Father">
+                    </div>
+                    <div class="mb-3">
+                        <label for="moname" class="form-label font-semibold text-orange-500">Name of Mother</label>
+                        <input type="text" class="form-control" id="moname" placeholder="Enter name of Mother">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact" class="form-label font-semibold text-orange-500">Contact Number of Guardian</label>
+                        <input type="number" class="form-control" id="contact" placeholder="Enter contact number of Guardian">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label font-semibold text-orange-500">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label font-semibold text-orange-500">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-end">
+            <button type="submit" class="btn btn-primary me-2">Register</button>
+            <button type="button" class="btn btn-secondary" id="updateBtn" style="display: none;">Update</button>
+            <a href="table.html" class="btn btn-link">View Registered Students</a>
+            </div>
+        </form>
+    </div>
+    
+    
+    
+    
+
+
+
+    <footer class="text-center text-white py-4">
+        <p>&copy; 2024 Student Information System | Registration Form</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
